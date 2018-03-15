@@ -77,3 +77,48 @@ function StopSound(soundobj) {
 	thissound.pause();
 	thissound.currentTime = 0;
 }
+
+
+
+
+
+
+////////input own file info below 
+var $audio = $('#myAudio');
+$('input').on('change', function(e) {
+	var target = e.currentTarget;
+	var file = target.files[0];
+	var reader = new FileReader();
+
+
+	if (target.files && file) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			$audio.attr('src', e.target.result);
+			//$audio.play();
+		}
+
+		reader.readAsDataURL(file);
+	}
+});
+
+$(document).ready(function() {
+	$("#play-bt").click(function() {
+		$("#audio-player")[0].play();
+	})
+
+	$("#stop-bt").click(function() {
+		$("#audio-player")[0].pause();
+		$("#audio-player")[0].currentTime = 0;
+	})
+})
+var playing = true;
+
+$('#myAudio').on('playing', function() {
+	playing = true;
+	// disable button/link
+});
+$('#myAudio').on('ended', function() {
+	playing = false;
+	// enable button/link
+});

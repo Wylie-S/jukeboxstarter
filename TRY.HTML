@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>
-         Jukebox
-      </title>
-      <link href="TRY.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      Jukebox
+    </title>
+    <link href="TRY.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
 
-   </head>
-   <body>
-      <h1 class="header-text">
-      </h1>
-<div class="container">
-
-
-
-<p onmouseover="PlaySound('mySound')"
-    onmouseout="StopSound('mySound')">Hover Over Me To Play</p>
-</div>
-
-
-
-      <div class="myPlayer jukebox-text">
-         <audio autoplay="" id='myAudio' src="mp3s/beyonce.mp3"></audio>
-         <div id="display">
-            SELECTAAH
-         </div>
-         <button class="button-style" id="play">Play</button> <button class=
-         "button-style" id="pause">Pause</button> <button class="button-style"
-         id="stop">Stop/Reset</button> <button class="button-style" id=
-         "next">Next</button>
-         <div id='time'>
-         </div>
-
-<audio id='mySound' src="mp3s/beyonce.mp3"></audio>
-
-
+    <header>
+      <div class="gifs">
+        <img src="images/club.gif" alt="club" style="width: 1425px;height:458px;float:  right;">
       </div>
-      <script src="TRY.js">
-      </script>
-</div>
-   </body>
-
+    </header>
+    <div class="myPlayer jukebox-text">
+      <audio autoplay="" id='myAudio' src="mp3s/beyonce.mp3"></audio>
+    </div>
+    <div id="display"></div>
+    <button class="button-style" id="play">Play</button> <button class=
+      "button-style" id="pause">Pause</button> <button class="button-style"
+      id="stop">Stop/Reset</button> <button class="button-style" id=
+      "next">Next</button></div>
+    <div id='time'>
+    </div>
+    <div>
+      LOAD MP3
+      <input type="file">
+      <audio controls id="myAudio"class="hide_file" onended="filename"="input"=""></audio>
+    </div>
+    <audio id='mySound' src="mp3s/beyonce.mp3"></audio>
+    <script src ="TRY.js"></script>
+  </body>
+<footer>
+  <center><p onmouseover="PlaySound('mySound')"
+    onmouseout="StopSound('mySound')">Hover Over Me To Play</p></center>
+</div></footer>
 </html>
