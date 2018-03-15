@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Jukebox</title>
-	<link rel="stylesheet" href="TRY.css">
-</head>
-<body>
-	<h1 class="header-text">Wylie Jukebox</h1>
-	<div class="myPlayer jukebox-text">
-		<audio id='myAudio' src="mp3s/beyonce.mp3" autoplay>
-		</audio>
-		<div id="display">SELECTAAH</div>
-		<button id="play" class="button-style">Play</button>
-		<button id="pause" class="button-style">Pause</button>
-		<button id="stop" class="button-style">Stop/Reset</button>
-		<button id="next" class="button-style">Next</button>
-		<div id='time'></div>
-	</div>
-	<script src="TRY.js"></script>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <title>
+         Jukebox
+      </title>
+      <link href="TRY.css" rel="stylesheet">
+
+   </head>
+   <body>
+      <h1 class="header-text">
+      </h1>
+<div class="container">
+
+
+
+<p onmouseover="PlaySound('mySound')"
+    onmouseout="StopSound('mySound')">Hover Over Me To Play</p>
+</div>
+
+
+
+      <div class="myPlayer jukebox-text">
+         <audio autoplay="" id='myAudio' src="mp3s/beyonce.mp3"></audio>
+         <div id="display">
+            SELECTAAH
+         </div>
+         <button class="button-style" id="play">Play</button> <button class=
+         "button-style" id="pause">Pause</button> <button class="button-style"
+         id="stop">Stop/Reset</button> <button class="button-style" id=
+         "next">Next</button>
+         <div id='time'>
+         </div>
+
+<audio id='mySound' src="mp3s/beyonce.mp3"></audio>
+
+
+      </div>
+      <script src="TRY.js">
+      </script>
+</div>
+   </body>
+
 </html>
